@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mikey's Sneakers</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="css/cart-popup.css">
+  <script src="js/cart-popup.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+  <nav class="navbar">
+    <div class="navbar-logo">
+        <img src="../assets/image-removebg-preview.png" alt="Logo">
+        <span class="brand-name"><img id="navbar-logo-img" src="../assets/fontbolt__1_-removebg-preview (1).png"></span>
+        
+    </div>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#cardimgtop">New</a></li>
+            <li><a>Cart<i class="fas fa-shopping-cart"></i></a></li>
+            <div id="cart-popup" class="cart-popup">
+
+              <div class="cart" id="cart-item">
+                <div class="aside__cart">
+                  <p class="aside__cart__header">
+                    <i class="fas fa-shopping-cart cart__header__icon"></i>Your Shopping Cart
+                  </p>
+                  <div class="card cart__card" id="cart">
+                    <!-- Cart items will be dynamically added here -->
+                  </div>
+                  <hr>
+              <!-- SUBTOTAL AND BTNs -->
+                <p class="aside__cart__subtotal">Subtotal: <span id="subtotal">$0.00</span></p>
+                  <button type="button" class="btn btn-danger aside__cart__btn"><i class="far fa-credit-card"></i> <a class="closed" href="./closedLink/index.html">go to checkout</a></button>
+                </div>
+              <!-- SUBTOTAL AND BTNs -->
+            </div>
+        </ul>
+    </div>
+  </nav>
+</header>
+  <!-- Landing Page Section -->
+<!-- Inside the container -->
+<div class="container" id="home">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="box left"><button class="shop-button2">SHOP MENS</button></div>
+    </div>
+    <div class="col-lg-6">
+      <div class="box right"><button class="shop-button2">SHOP WOMENS</button></div>
+    </div>
+  </div>
+</div>
+<!-- END OF LANDING PAGE -->
+<!-- start of Cat Cards -->
+<div class="border-container" id="categories">
+  <h2><img id="newinimg"class="sectionimg" src="../assets/fontbolt__2_-removebg-preview (1).png"></h2>
+  <div class="article-cards-container">
+    <!-- Men's Clothes Category -->
+    <div class="article-card">
+      <img src="../assets/silhouette-hooded-thief-walking-black-generated-by-ai.png" alt="Men's Clothes">
+      <div class="content">
+        <h3 class="titleM">Men's Clothes</h3>
+        <p class="descriptionM">Explore our collection of men's clothing.</p>
+        <a class="shop-button" href="mens_clothes.html">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Men's Sneakers Category -->
+    <div class="article-card">
+      <img src="../assets/modern-elegance-black-leather-sports-shoes-shine-generated-by-ai.jpg" alt="Men's Sneakers">
+      <div class="content">
+        <h3 class="titleM">Men's Sneakers</h3>
+        <p class="descriptionM">Discover the latest men's sneaker styles.</p>
+        <a class="shop-button" href="mens_clothes.html">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Women's Clothes Category -->
+    <div class="article-card">
+      <img src="../assets/fashion-store-showcases-elegant-black-white-collection-generated-by-ai.jpg" alt="Women's Clothes">
+      <div class="content">
+        <h3 class="titleM">Women's Clothes</h3>
+        <p class="descriptionM">Shop for trendy women's clothing options.</p>
+        <a class="shop-button" href="mens_clothes.html">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Women's Sneakers Category -->
+    <div class="article-card">
+      <img src="../assets/modern-black-sports-shoe-comfortable-exercising-generated-by-ai.jpg" alt="Women's Sneakers">
+      <div class="content">
+        <h3 class="titleM">Women's Sneakers</h3>
+        <p class="descriptionM">Find the perfect sneakers for women.</p>
+        <a class="shop-button" href="mens_clothes.html">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of cat cards -->
+<div class="container">
+<div class="row header__row">
+<!-- MAIN CNT -->
+<div class="row main-cnt">
+ <div class=class="col-sm-6 col-md-3">
+<!-- PRODUCT CARDS --> 
+<!-- CARD ONE -->
+<div class="container products-container">
+  <img id="newinimg" src="../assets/fontbolt__4_-removebg-preview.png">
+  <div class="row products">
+<div class="row products">
+  <div class="col-sm-6 col-md-3">
+    <div class="card card__sale">
+      <div class="card__sale__label">
+        On Sale!
+      </div>
+      <img class="card-img-top" id="cardimgtop" src="../assets/mikeypurple.png" data-src="./assets/mikeypurple.png" alt="Card image cap">
+      <div class="card-body products__card">
+        <div class="card-text">
+          <div class="products__card__text">
+            <p class="card__text__title">Mikey's Purple Edition</p>
+            <div class="card__text__wraper"> 
+              <p class="card__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+              <div class="card__text__price">
+                <div class="price__sale">$144</div>
+                <div class="price__normal">$132</div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="products__card__text flex">
+            <ul class="card__text__list">
+              <li class="text__list__item"><a href="#" class="list__item__a--light">View Product</a></li>
+              <li class="text__list__item"><a href="#" class="list__item__a--light">Add to Wishlist</a></li>
+            </ul>
+            <button class="btn btn-outline-dark card__text__btn add-to-cart-btn" 
+            data-product-name="Mikey's Purple Edition" 
+            data-product-price="132.00"
+            data-product-image="../assets/mikeypurple.png">
+              <i class="fas fa-shopping-cart"></i> add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CARD TWO -->
+  <div class="col-sm-6 col-md-3">
+    <div class="card">
+      <img class="card-img-top" id="cardimgtop" src="../assets/mikeyred.png" data-src="./assets/mikeyred.png" alt="Card image cap">
+      <div class="card-body products__card">
+        <div class="card-text">
+          <div class="products__card__text">
+            <p class="card__text__title">Mikey's Red Edition</p>
+            <div class="card__text__wraper"> 
+              <p class="card__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+              <div class="card__text__price">
+                <div class="price__normal">$164</div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="products__card__text flex">
+            <ul class="card__text__list">
+              <li class="text__list__item"><a href="#" class="list__item__a--light">View Product</a></li>
+              <li class="text__list__item"><a href="#" class="list__item__a--light">Add to Wishlist</a></li>
+            </ul>
+            <button class="btn btn-outline-dark card__text__btn add-to-cart-btn" 
+            data-product-name="Mikey's Red Edition"
+            data-product-price="164.00" 
+            data-product-image="../assets/mikeyred.png">
+              <i class="fas fa-shopping-cart"></i> add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--CARD THREE -->
+  <div class="col-sm-6 col-md-3">
+    <div class="card">
+      <img class="card-img-top" id="cardimgtop" src="../assets/mikeydew.png" data-src="./assets/mikeydew.png" alt="Card image cap">
+      <div class="card-body products__card">
+        <div class="card-text">
+          <div class="products__card__text">
+            <p class="card__text__title">Mikey's dew Edition</p>
+            <div class="card__text__wraper"> 
+              <p class="card__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+              <div class="card__text__price">
+                <div class="price__normal">$112</div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="products__card__text flex">
+            <ul class="card__text__list">
+              <li class="text__list__item"><a href="#" class="list__item__a--light">View Product</a></li>
+              <li class="text__list__item"><a href="#" class="list__item__a--light">Add to Wishlist</a></li>
+            </ul>
+            <button class="btn btn-outline-dark card__text__btn add-to-cart-btn" 
+            data-product-name="Mikey's dew Edition" 
+            data-product-price="112.00" 
+            data-product-image="../assets/mikeydew.png">
+              <i class="fas fa-shopping-cart"></i> add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--CARD FOUR -->
+  <div class="col-sm-6 col-md-3">
+    <div class="card">
+      <img class="card-img-top" id="cardimgtop" src="../assets/mikeyteal.png" data-src="./assets/mikeyteal.png" alt="Card image cap">
+      <div class="card-body products__card">
+        <div class="card-text">
+          <div class="products__card__text">
+            <p class="card__text__title">Mikey's Teal Edition</p>
+            <div class="card__text__wraper"> 
+              <p class="card__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+              <div class="card__text__price">    
+                <div class="price__normal">$129</div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="products__card__text flex">
+            <ul class="card__text__list">
+              <li class="text__list__item"><a href="#" class="list__item__a--light">View Product</a></li>
+              <li class="text__list__item"><a href="#" class="list__item__a--light">Add to Wishlist</a></li>
+            </ul>
+            <button class="btn btn-outline-dark card__text__btn add-to-cart-btn" 
+            data-product-name="Mikey's Teal Edition" 
+            data-product-price="129.00" 
+            data-product-image="../assets/mikeyteal.png">
+              <i class="fas fa-shopping-cart"></i> add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+  <div class="footer-content">
+      <div class="footer-section about">
+          <h3>About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+      <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p>Email: info@example.com</p>
+      </div>
+      <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <a href="#" class="social-icon">Facebook</a>
+          <a href="#" class="social-icon">Twitter</a>
+          <a href="#" class="social-icon">Instagram</a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      &copy; 2023 Your E-commerce Store. All Rights Reserved.
+  </div>
+</footer>
+  <script>
+    window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 0);
+
+  const logo = document.getElementById("navbar-logo-img");
+  if (window.scrollY > 0) {
+    // Change to the black logo when scrolled
+    logo.src = "../assets/fontbolt__1_-removebg-preview.png"; // Replace with your black logo path
+  } else {
+    // Change back to the white logo when at the top
+    logo.src = "../assets/fontbolt__1_-removebg-preview (1).png"; // Replace with your white logo path
+  }
+});
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
