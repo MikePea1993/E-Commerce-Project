@@ -31,12 +31,13 @@ header {
 
 /* Style the container */
 .box {
-  height: 100vh; /* You can adjust the height as needed */
+  height: 50vh; /* You can adjust the height as needed */
   width: 50%;  
   text-align: center;
   box-sizing: border-box;
   background-size: cover; /* Ensure the background image covers the div */
   background-position: center; /* Center the background image */
+  overflow: hidden;
 }
 
 .left {
@@ -51,15 +52,27 @@ header {
 
 .right {
   width: 48.5vw;
-  float: left;
+  float: right;
   box-sizing: border-box;
   border-radius: 20px;
   background-image: url(./assets/woman-pink-dress-poses-front-black-background.jpg);
   border: 3px solid #E2492F; /* Border for visualization */
   padding: 10px;
-  overflow-x: hidden;
+  
 }
 
+        /* Add a media query to adjust styles for smaller screens */
+        @media (max-width: 768px) {
+          .container {
+              height: auto; /* Reset the height for smaller screens */
+          }
+
+          .left, .right {
+              width: 100%;
+              float: none;
+              margin-bottom: 20px; /* Add some spacing between the boxes */
+          }
+      }
 /* Style the navbar container */
 .navbar {
   display: flex;
@@ -69,10 +82,14 @@ header {
   background: none
 }
 
+#newlogo {
+  margin-bottom: 15px;
+}
 /* Style the logo and brand name section on the top left */
 .navbar-logo img {
   height: 60px; /* Adjust the logo height as needed */
   margin-right: 10px;
+
 }
 
 .brand-name {
@@ -246,6 +263,86 @@ header.scrolled .navbar-links ul li a {
   margin: 0 auto 0px; /* Center the image horizontally and add spacing below it */
 }
 
+/* SCROLLING BANNER */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: monaco;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.scroll-banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  margin: 1rem 0;
+  overflow: hidden;
+  background-color: white;
+}
+.scroll-banner ul.client-list {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  list-style: none;
+  white-space: nowrap;
+}
+.scroll-banner ul.client-list.cloned {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white !important;
+}
+.scroll-banner ul.client-list li .photobanner img {
+  max-width: 100%; /* Set a maximum width to ensure responsiveness */
+  max-height: 100px; /* Set the maximum height as needed */
+}
+
+.photobanner img:hover {
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+.scroll-banner ul.client-list li {
+  float: left;
+  width: auto;
+  height: 150px;
+  margin: 0 6px;
+  padding: 4px;
+  color: white;
+  background-color: white;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-banner ul.client-list li .circle {
+  background: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-banner ul.client-list li:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+
 .article-card {
   width: 300px; /* Adjust the width as needed */
   height: 400px;
@@ -365,15 +462,30 @@ header.scrolled .navbar-links ul li a {
     margin-top: 20px; /* Adjust the top margin as needed */
     background-color: white; /* Background color for the container */
     margin-bottom: 30px;
-  }
-  #newinimg {
-    margin-top: 20px;
-    border: 3px solid;
-    border-radius: 40px;
-    padding: 15px;
-    border-color: #E2492F;
     
   }
+ 
+  #newinimg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center the image horizontally and add 20px margin at the top */
+    border: 3px solid #E2492F;
+    border-radius: 40px;
+    padding: 15px;
+}
+
+#newimg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Center the image horizontally and add 20px margin at the top */
+  border: 3px solid #E2492F;
+  border-radius: 40px;
+  padding: 15px;
+}
+
+  
 .card {
   margin-left: 30px;
   margin-top: 20px;
@@ -676,3 +788,4 @@ ul li {
   background-color: #222;
   padding: 10px 0;
 }
+
