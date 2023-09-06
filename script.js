@@ -109,3 +109,32 @@ document.addEventListener("click", function(event) {
   });
 });
 
+var $banner = $(".scroll-banner");
+var $list = $banner.find("ul.client-list");
+var $clonedList = $list.clone();
+var $listWidth = $list.find("li").length * 212;
+
+$list.add($clonedList).css({
+	"width" : $listWidth + "px"
+});
+
+$clonedList.addClass("cloned").appendTo($banner);
+
+// TimelineMax
+
+var $infinite = new TimelineMax({repeat: -1, paused: false});
+var $time = 15;
+
+$infinite.fromTo($list, $time, {left:0}, {left: -$listWidth, ease: Linear.easeNone}, 0);
+$infinite.fromTo($clonedList, $time, {left:$listWidth}, {left:0, ease: Linear.easeNone}, 0);
+$infinite.set($list, {left: $listWidth});
+$infinite.to($clonedList, $time, {left: -$listWidth, ease: Linear.easeNone}, $time);
+$infinite.to($list, $time, {left: 0, ease: Linear.easeNone}, $time);
+
+// Pause/Play
+
+$banner.on("mouseenter", function(){
+	$infinite.pause();
+}).on("mouseleave", function(){
+	$infinite.play();
+});
