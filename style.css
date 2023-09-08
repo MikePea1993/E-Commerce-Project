@@ -390,13 +390,14 @@ html {
   display: flex;
   gap: 10px;
   padding: 10px;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: scroll; /* Enable horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   scrollbar-width: none; /* Hide the scrollbar for Firefox */
   -ms-overflow-style: none; /* Hide the scrollbar for IE and Edge */
+  white-space: nowrap; /* Prevent cards from wrapping to the next line */
 }
 
-
+/* Hide the scrollbar for Webkit browsers (Chrome, Safari) */
 .article-cards-container::-webkit-scrollbar {
   display: none;
 }
