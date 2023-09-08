@@ -1,4 +1,5 @@
 
+ 
   html {
     scroll-behavior: smooth;
 
@@ -8,26 +9,19 @@
   margin: 0;
   padding: 0;
 }
-body {
-  margin: 0;
-  padding: 0;
-}
 
-html {
-  margin: 0;
-  padding: 0;
-}
 /* Create a transparent background for the header */
 header { 
   background-color: #ffffff00;
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background 0.3s; /* Add a transition for smooth opacity change */
-  width: 100%; /* Add this to make the header span the entire viewport width */
-  left: 0; /* Ensure the header starts from the left edge of the viewport */
-  right: 0; /* Ensure the header ends at the right edge of the viewport */
+  transition: background 0.3s;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
+
 
 /* Style the container */
 .box {
@@ -74,28 +68,30 @@ header {
           }
       }
 /* Style the navbar container */
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: none
+  background: none;
 }
 
 #newlogo {
   margin-bottom: 15px;
 }
+
 /* Style the logo and brand name section on the top left */
 .navbar-logo img {
-  height: 60px; /* Adjust the logo height as needed */
+  height: 60px;
   margin-right: 10px;
-
 }
 
 .brand-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333; /* Adjust the color as needed */
+  color: #333;
 }
 
 /* Style the navigation links on the top right */
@@ -114,13 +110,13 @@ header {
 
 .navbar-links ul li a {
   text-decoration: none;
-  color: #333; /* Adjust the color as needed */
+  color: #333;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .navbar-links ul li a:hover {
-  color: white; /* Change the color on hover */
+  color: white;
   background: #E2492F;
   padding: 8px;
   border-radius: 5px;
@@ -128,7 +124,7 @@ header {
 
 /* Update the background opacity when scrolled down */
 header.scrolled {
-  background: rgb(0, 0, 0); /* Slightly transparent white background */
+  background: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
@@ -136,87 +132,50 @@ header.scrolled .navbar-links ul li a {
   color: white;
 }
 
+/* Modify the cart product images */
 .cart-popup {
   overflow-x: hidden;
   padding-left: 10px;
   margin-top: 10px;
   border-radius: 10px;
-  background-color: white; /* Set the background color for the cart popup */
-  color: black; /* Set the text color for the cart popup */
-  width: 300px; /* Adjust the width as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for the popup */
+  background-color: white;
+  color: black;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: solid;
 }
 
-/* Style the cart product items */
-.cart-product {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid black; /* Add a border between items */
-}
-
-.cart-product img {
-  width: 50px; /* Adjust the image size as needed */
-  height: 50px;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
-.cart-product-details {
-  flex-grow: 1;
-}
-
-.cart-product-name {
-  font-weight: bold;
-}
-
-.cart-product-remove {
-  cursor: pointer;
-  color: #E2492F; /* Change the remove button color */
-}
-
-/* Style the cart total */
-.cart-total {
-  text-align: right;
-  padding: 10px;
-  font-weight: bold;
-  border-top: 1px solid #ddd; /* Add a border above the total */
-}
-
-/* Hover effect for remove button */
-.cart-product-remove:hover {
-  color: #FF0000; /* Change the color on hover */
-}
-/* Landing Page Styles */
-
+/* Add more styles for buttons, links, or other elements as needed */
 
 .shop-button2 {
-  background-color: rgba(252, 252, 252, 0.514);
-  color: black;
-  font-size: 16px;
+  display: block; /* Change from inline-block to block */
+  margin: 0 auto; /* Center the button horizontally */
   padding: 10px 20px;
-  border: 0px;
-  cursor: pointer;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: none;
   border-radius: 5px;
-  margin: 10px auto; /* Center the button horizontally */
-  display: block; /* Ensure the button takes full width of its container */
-  margin-bottom: 50%;
-  margin-top: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity: 0.7;
 }
 
 /* Hover effect */
 .shop-button2:hover {
   background-color: #E2492F; /* Change the background color on hover */
-  color:white
+  color:white;
+  opacity: 1;
 }
+
 /* Add more styles for buttons, links, or other elements as needed */
 .titleM {
-  color: #E2492F;
+  color: white;
 }
 
 .descriptionM {
   color: white;
+  margin-right: 200px;
 }
 
 .shopnow {
@@ -248,39 +207,8 @@ header.scrolled .navbar-links ul li a {
   transition: background-color 0.3s ease; /* Add a smooth transition effect */
 
 }
-.border-container {
-  margin: 15px ; /* Center the container horizontally */
-  border: 2px solid #ccc; /* Border style and color */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside the border */
-  text-align: center;
-  position: relative;
-}
-
-.top-image {
-  max-width: 100%; /* Ensure the image fits within the container */
-  display: block; /* Remove any default inline styles */
-  margin: 0 auto 0px; /* Center the image horizontally and add spacing below it */
-}
 
 /* SCROLLING BANNER */
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-* {
-  font-family: monaco;
-  margin: 0;
-  padding: 0;
-}
-
-
-
 .scroll-banner {
   position: relative;
   top: 0;
@@ -291,6 +219,7 @@ html {
   overflow: hidden;
   background-color: white;
 }
+
 .scroll-banner ul.client-list {
   position: relative;
   display: inline-block;
@@ -298,20 +227,22 @@ html {
   list-style: none;
   white-space: nowrap;
 }
+
 .scroll-banner ul.client-list.cloned {
   position: absolute;
   top: 0;
   left: 0;
   background-color: white !important;
 }
+
 .scroll-banner ul.client-list li .photobanner img {
-  max-width: 100%; /* Set a maximum width to ensure responsiveness */
-  max-height: 100px; /* Set the maximum height as needed */
+  max-width: 100%;
+  max-height: 100px;
 }
 
 .photobanner img:hover {
-  transform: scale(1.1); /* Increase the size by 10% on hover */
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 
@@ -328,6 +259,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .scroll-banner ul.client-list li .circle {
   background: white;
   width: 60px;
@@ -337,24 +269,26 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .scroll-banner ul.client-list li:hover {
   cursor: pointer;
   background-color: white;
 }
 
-
 .article-card {
-  width: 300px; /* Adjust the width as needed */
+  width: 400px;
   height: 400px;
   border-radius: 12px;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 300ms, box-shadow 300ms;
   position: relative;
-  margin: 20px; /* Add margin to create spacing between cards */
+  display: flex; /* Use Flexbox to center content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
-
 .article-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the hover shadow */
@@ -394,12 +328,19 @@ html {
 }
 
 .article-cards-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* This will create 4 columns per row */
+  display: flex;
   gap: 10px;
   padding: 10px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  scrollbar-width: none; /* Hide the scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide the scrollbar for IE and Edge */
 }
 
+
+.article-cards-container::-webkit-scrollbar {
+  display: none;
+}
 
 /* Centering content vertically and horizontally */
 .center-content {
@@ -455,14 +396,13 @@ html {
   
   /* PRODUCTS */
   .products-container {
-    width: 98.5vw;
-    border: 2px solid #c7c7c7; /* Border style and color */
-    border-radius: 20px; /* Border radius */
+    width: 100vw;
+    border-top: 2px solid black; /* Border style and color */
     padding: 20px; /* Add some padding to the container */
     margin-top: 20px; /* Adjust the top margin as needed */
     background-color: white; /* Background color for the container */
     margin-bottom: 30px;
-    
+
   }
  
   #newinimg {
@@ -637,11 +577,16 @@ html {
   }
   
   .cart__card {
-    margin-bottom: 5%;
     border-radius: 0 !important;
     border: none !important;
+    max-width: none !important; /* Remove Bootstrap's max-width property */
+    width: 165% !important; /* Make the images take up 100% of the container width */
+    height: auto !important; /* Maintain aspect ratio */
+    object-fit: contain !important; /* Use "contain" to fit the entire image in the container */
+    padding-right: 125px !important;
+    margin-left: -5px;
   }
-  
+
   .cart__product {
     color: black;
     font-size: 0.7em;
@@ -715,7 +660,8 @@ html {
   /* For viewport widths less than 768px, show one card per row */
 @media screen and (max-width: 768px) {
   .article-cards-container {
-    grid-template-columns: 1fr;
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    overflow-x: scroll; /* Enable horizontal scrolling on smaller screens */
   }
 }
 
@@ -723,6 +669,8 @@ html {
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .article-cards-container {
     grid-template-columns: repeat(2, 1fr);
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    overflow-x: scroll; /* Enable horizontal scrolling on smaller screens */
   }
 }
 
@@ -788,4 +736,5 @@ ul li {
   background-color: #222;
   padding: 10px 0;
 }
+
 
