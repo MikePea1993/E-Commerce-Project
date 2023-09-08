@@ -29,6 +29,7 @@ header {
   right: 0; /* Ensure the header ends at the right edge of the viewport */
 }
 
+
 /* Style the container */
 .box {
   height: 50vh; /* You can adjust the height as needed */
@@ -148,20 +149,10 @@ header.scrolled .navbar-links ul li a {
   border: solid;
 }
 
-/* Style the cart product items */
-.cart-product {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid black; /* Add a border between items */
-}
 
-.cart-product img {
-  width: 50px; /* Adjust the image size as needed */
-  height: 50px;
-  object-fit: cover;
-  margin-right: 10px;
-}
+
+/* Modify the cart product images */
+
 
 .cart-product-details {
   flex-grow: 1;
@@ -190,7 +181,6 @@ header.scrolled .navbar-links ul li a {
 }
 /* Landing Page Styles */
 
-
 .shop-button2 {
   background-color: rgba(252, 252, 252, 0.514);
   color: black;
@@ -212,11 +202,12 @@ header.scrolled .navbar-links ul li a {
 }
 /* Add more styles for buttons, links, or other elements as needed */
 .titleM {
-  color: #E2492F;
+  color: white;
 }
 
 .descriptionM {
   color: white;
+  margin-right: 200px;
 }
 
 .shopnow {
@@ -344,17 +335,19 @@ html {
 
 
 .article-card {
-  width: 300px; /* Adjust the width as needed */
+  width: 400px;
   height: 400px;
   border-radius: 12px;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 300ms, box-shadow 300ms;
   position: relative;
-  margin: 20px; /* Add margin to create spacing between cards */
+  display: flex; /* Use Flexbox to center content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
-
 .article-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the hover shadow */
@@ -394,12 +387,19 @@ html {
 }
 
 .article-cards-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* This will create 4 columns per row */
+  display: flex;
   gap: 10px;
   padding: 10px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  scrollbar-width: none; /* Hide the scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide the scrollbar for IE and Edge */
 }
 
+
+.article-cards-container::-webkit-scrollbar {
+  display: none;
+}
 
 /* Centering content vertically and horizontally */
 .center-content {
@@ -455,14 +455,13 @@ html {
   
   /* PRODUCTS */
   .products-container {
-    width: 98.5vw;
-    border: 2px solid #c7c7c7; /* Border style and color */
-    border-radius: 20px; /* Border radius */
+    width: 100vw;
+    border-top: 2px solid black; /* Border style and color */
     padding: 20px; /* Add some padding to the container */
     margin-top: 20px; /* Adjust the top margin as needed */
     background-color: white; /* Background color for the container */
     margin-bottom: 30px;
-    
+
   }
  
   #newinimg {
@@ -637,11 +636,16 @@ html {
   }
   
   .cart__card {
-    margin-bottom: 5%;
     border-radius: 0 !important;
     border: none !important;
+    max-width: none !important; /* Remove Bootstrap's max-width property */
+    width: 165% !important; /* Make the images take up 100% of the container width */
+    height: auto !important; /* Maintain aspect ratio */
+    object-fit: contain !important; /* Use "contain" to fit the entire image in the container */
+    padding-right: 125px !important;
+    margin-left: -5px;
   }
-  
+
   .cart__product {
     color: black;
     font-size: 0.7em;
@@ -715,7 +719,8 @@ html {
   /* For viewport widths less than 768px, show one card per row */
 @media screen and (max-width: 768px) {
   .article-cards-container {
-    grid-template-columns: 1fr;
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    overflow-x: scroll; /* Enable horizontal scrolling on smaller screens */
   }
 }
 
@@ -723,6 +728,8 @@ html {
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .article-cards-container {
     grid-template-columns: repeat(2, 1fr);
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    overflow-x: scroll; /* Enable horizontal scrolling on smaller screens */
   }
 }
 
